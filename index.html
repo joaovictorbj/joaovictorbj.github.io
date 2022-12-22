@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>joaovictorbj page</title>
+    <title>J. Victor Pereira-DoWhile 2022</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https: //fonts.googleapis.com/css2? family= Roboto:wght@400;700 & display=swap" rel="stylesheet"> 
   </head>
+
   <body>
-    <h1>Bem vindos a minha pagina no github</h1>
-    <p>Aqui vocês terão acesso aos meus projetos.</p>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="images/build.svg" alt="selo da rocketseat" />
+          </span>
+          <img src="images/é essa.png" alt="foto pessoal J Victor" />
+        </div>
+
+        <h1 id="userName">João Victor P. Silva</h1>
+        <a href="https://github.com/joaovictorbj"
+        target="_blank">
+          <img src="images/github.svg" alt="ícone github" />
+          joaovictorbj</a
+        >
+
+        <p>um estudante focado em aprender programação para web</p>
+
+        <ul id="SocialLinks">
+          <li class="youtube">
+            <a  href="https://www.youtube.com/channel/UCFeVfBE0aMxcjCDo_3z9ZVg"
+            target="_blank" >
+                <img src="images/youtube.svg" alt="ícone do Youtube" >
+          </li>
+
+          <li class="instagram">
+            <a 
+            href="https://instagram.com/bjorn_jv"
+            target="_blank"
+            >
+            <img src="images/instagram.svg" alt="ícone do Instagram"  >
+          </li>
+
+          <li class="facebook">
+            <a 
+            href="https://facebook.com/jvictorr17"
+            target="_blank"
+            >
+            <img src="images/facebook.svg" alt="ícone do Facebook"   >
+          </li>
+
+          <li class="twitter">
+            <a 
+            href="https://twitter.com/bjorn_jv"
+            target="_blank"
+            >
+            <img src="images/twiter.svg" alt="ícone do twitter"   />
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script>
+
+   const LinksSocialMedia = {
+    github: 'joaovictorbj',
+    youtube: 'UCFeVfBE0aMxcjCDo_3z9ZVg',
+    facebook: 'jvictorr17',
+    instagram: 'bjorn_jv',
+    twitter: 'bjorn_jv'
+  }
+ 
+   function changeSocialMediaLinks () {
+    for (let li of SocialLinks.children) {
+      const social = li.getAttribute('class')
+   li.children[0].href= `https://${social}.com/channel/${LinksSocialMedia[social]}`
+   console.log(li.children[0].href)
+    }
+   }
+    changeSocialMediaLinks()
+    </script>
+  
 
   </body>
 </html>
